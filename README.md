@@ -6,7 +6,7 @@ This repo contains code accompaning the paper, 	[PAPER NAME](https://arxiv.org/a
 This code requires the following:
 * python 3.7+
 * TensorFlow v2.12.0+
-* keras_cv vBLANK
+* keras_cv v1.4.0
 
 ### Data
 The Domain Adaptive experiments are perfomed by choosing two domains from Office-Home, MiniImageNet-CUB and DomainNet datasets.
