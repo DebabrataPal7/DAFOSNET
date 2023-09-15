@@ -1,7 +1,6 @@
 # DAFOSNET
 
 This repo contains code accompaning the paper, 	[Domain Adaptive Few-Shot Open-Set
-
 Learning](https://arxiv.org/abs/URL). It includes code for running the few-shot domain adaptive semi-supervised learning domain experiments.
 
 ### Dependencies
