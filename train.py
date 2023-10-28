@@ -190,8 +190,8 @@ for epoch in range(start_epoch, config["train_epochs"]): # 80 train + 80 tune + 
         tf.summary.scalar('outlier_det_acc', train_outlier_acc.result(), step=epoch)
         tf.summary.scalar('domain_det_acc', train_domain_acc.result(), step=epoch)
 
-    template = 'Epoch {}, Train Loss: {:.2f}, Train Accuracy: {:.2f}, Train Closed OA: {:.2f},Train Open OA: {:.2f}, Train Outlier Det. Acc: {:.2f}, Train Domain Det. Acc: {:.2f}'
-    print(template.format(epoch+1,train_loss.result(),train_acc.result()*100,train_closedoa_cm.result()*100,train_openoa.result()*100,train_outlier_acc.result()*100,train_domain_acc.result()*100))
+    template = 'Epoch {}, Train Loss: {:.2f}, Train Closed OA: {:.2f},Train Open OA: {:.2f}, Train Outlier Det. Acc: {:.2f}, Train Domain Det. Acc: {:.2f}'
+    print(template.format(epoch+1,train_loss.result(),train_closedoa_cm.result()*100,train_openoa.result()*100,train_outlier_acc.result()*100,train_domain_acc.result()*100))
     #save mean accuracy values per epoch
     save_accuracy_values(train_closedoa_cm.result(), train_openoa.result(), 'accuracy_values.npy')
     #save variance for accuracys
