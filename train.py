@@ -184,7 +184,7 @@ for epoch in range(start_epoch, config["train_epochs"]): # 80 train + 80 tune + 
         train_step(tsupport_patches,tquery_patches,support_labels,query_labels,support_classes,CS, CQ, Ss, Sd, Qsk, Qdk, Qsu, Qdu, query_dom_labels, support_dom_labels)
     with train_summary_writer.as_default():
         tf.summary.scalar('loss', train_loss.result(), step=epoch)
-        tf.summary.scalar('accuracy', train_acc.result(), step=epoch)
+        #tf.summary.scalar('accuracy', train_acc.result(), step=epoch)
         tf.summary.scalar('closedoa_cm', train_closedoa_cm.result(), step=epoch)
         tf.summary.scalar('openoa', train_openoa.result(), step=epoch)
         tf.summary.scalar('outlier_det_acc', train_outlier_acc.result(), step=epoch)
