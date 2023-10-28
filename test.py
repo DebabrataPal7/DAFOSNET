@@ -120,5 +120,5 @@ for epoch in range(config["test_epochs"]): # 80 train + 80 tune + 100 train + 16
         tf.summary.scalar('outlier_acc',test_outlier_acc.result(), step=epoch)
         tf.summary.scalar('domain_acc',test_domain_acc.result(), step=epoch)
 
-    template = 'Epoch {}, Test Accuracy: {:.2f}, Test Closed OA CM: {:.2f}, Test Open OA: {:.2f}, Test Outlier Det. Acc: {:.2f}, Test Domain Det. Acc: {:.2f}'
-    print(template.format(epoch+1,test_acc.result()*100,test_closedoa_cm.result()*100, test_openoa.result()*100,test_outlier_acc.result()*100,test_domain_acc.result()*100))
+    template = 'Epoch {}, Test Closed OA CM: {:.2f}, Test Open OA: {:.2f}, Test Outlier Det. Acc: {:.2f}, Test Domain Det. Acc: {:.2f}'
+    print(template.format(epoch+1,test_closedoa_cm.result()*100, test_openoa.result()*100,test_outlier_acc.result()*100,test_domain_acc.result()*100))
