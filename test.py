@@ -114,7 +114,7 @@ for epoch in range(config["test_epochs"]): # 80 train + 80 tune + 100 train + 16
         test_step(tsupport_patches,tquery_patches,support_labels,query_labels,support_classes,CS, CQ, Ss, Sd, Qsk, Qdk, Qsu, Qdu)
         print('query_labels:', query_labels)
     with test_summary_writer.as_default():
-        tf.summary.scalar('accuracy', test_acc.result(), step=epoch)
+        #tf.summary.scalar('accuracy', test_acc.result(), step=epoch)
         tf.summary.scalar('closedoa_cm', test_closedoa_cm.result(), step=epoch)
         tf.summary.scalar('openoa',test_openoa.result(), step=epoch)
         tf.summary.scalar('outlier_acc',test_outlier_acc.result(), step=epoch)
