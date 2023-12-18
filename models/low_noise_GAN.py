@@ -7,7 +7,7 @@ from tensorflow.keras import layers
 #GAN1 : to generate pseudo-known samples: Input low noise variance for SOURCE DOMAIN
 
 # Generator (Low) SOURCE DOMAIN
-generator_input_size=10+8#dababrata: input dimesnions for gans?? 28 is from feature output from episodes
+generator_input_size=10+8
 input_feature = layers.Input(shape=(generator_input_size,))
 layer_low_g1 = layers.Dense(32,activation='relu')(input_feature)
 layer_low_g2 = layers.Dense(48,activation='relu')(layer_low_g1)
